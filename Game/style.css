@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    touch-action: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    font-family: Arial, sans-serif;
+}
+
+#game {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#gameCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* HUD */
+
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 14px;
+
+    color: white;
+    background: rgba(0, 0, 0, 0.65);
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+/* MENU + FINISH */
+
+#menu,
+#finish {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 10;
+}
+
+#finish {
+    display: none;
+}
+
+h1 {
+    font-size: clamp(35px, 9vw, 70px);
+    letter-spacing: 4px;
+}
+
+p {
+    margin-top: 8px;
+}
+
+/* BUTTONS */
+
+button {
+    border: 2px solid white;
+    border-radius: 12px;
+
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+
+    font-weight: bold;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#startButton,
+#restartButton {
+    margin-top: 25px;
+    padding: 15px 28px;
+
+    font-size: 18px;
+}
+
+/* CONTROLS */
+
+#controls {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    z-index: 8;
+}
+
+#controls button {
+    width: 70px;
+    height: 55px;
+
+    font-size: 18px;
+
+    opacity: 0.85;
+}
+
+#brakeButton {
+    font-size: 11px !important;
+}
+
+#gasButton {
+    font-size: 14px !important;
+}
